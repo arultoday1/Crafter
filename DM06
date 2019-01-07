@@ -1,0 +1,168 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.5.25a
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema dmcluster
+--
+
+CREATE DATABASE IF NOT EXISTS dmcluster;
+USE dmcluster;
+
+--
+-- Definition of table `bill`
+--
+
+DROP TABLE IF EXISTS `bill`;
+CREATE TABLE `bill` (
+  `shopname` varchar(200) NOT NULL,
+  `mobilename` varchar(200) NOT NULL,
+  `mobilemodel` varchar(200) NOT NULL,
+  `branch` varchar(200) NOT NULL,
+  `price` varchar(200) NOT NULL,
+  `billdate` varchar(200) NOT NULL,
+  `mobilecolor` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bill`
+--
+
+/*!40000 ALTER TABLE `bill` DISABLE KEYS */;
+INSERT INTO `bill` (`shopname`,`mobilename`,`mobilemodel`,`branch`,`price`,`billdate`,`mobilecolor`) VALUES 
+ ('Poorvika','SAMSUNG',' GALAXY A7 ','Tambaram','22,990 ','2018-11-14','Blue'),
+ ('Sangeetha','apple ','iphone Xs','Chennai','134,900.00','2018-11-17','Gold'),
+ ('Sangeetha','apple ',' iPhone 5','Chennai','12,615','2018-11-17','White'),
+ ('Sangeetha','SAMSUNG','Galaxy A8+','Chennai','29,990','2018-11-17','Gold'),
+ ('Sangeetha','SAMSUNG','GALAXY A7','Chennai','23,990','2018-11-17','Blue'),
+ ('Sangeetha','SAMSUNG','GALAXY J8 ','Chennai','16,990','2018-11-17','BLACK'),
+ ('Sangeetha','SAMSUNG','Galaxy A6 Plus','Chennai','21,990','2018-11-17','Black'),
+ ('Poorvika','SAMSUNG','Galaxy On7 Prime','Chennai','13,990','2018-11-17','Black'),
+ ('Poorvika','Redmi','6 Pro ','Chennai','10,999','2018-11-17','Gold'),
+ ('Poorvika','Redmi','Y2','Chennai','10,490','2018-11-17','Gold'),
+ ('Poorvika','Redmi','6 Pro ','Chennai','10,999','2018-11-17','Blue'),
+ ('Sangeetha','Redmi','6 Pro ','Chennai','10,999','2018-11-17','Blue'),
+ ('Sangeetha','Redmi','Note 5 Pro','Chennai','14,799','2018-11-17','Gold'),
+ ('Sangeetha','Oppo','A3s','Chennai','9,990','2018-11-17','Purple'),
+ ('Poorvika','Oppo','A3s','Tambaram','9,990','2018-11-17','Purple'),
+ ('Poorvika','Oppo','A3s','Tambaram','12,990','2018-11-17','Dark Purple '),
+ ('Poorvika','Oppo','F9','Chennai','Mist Black','2018-11-17','Mist Black'),
+ ('Poorvika','Oppo','F9','Tambaram','Mist Black','2018-11-17','Mist Black'),
+ ('Poorvika','Oppo','F7 ','Tambaram','21,490','2018-11-17','Black'),
+ ('Poorvika','Vivo','V9Pro','Tambaram','17,990','2018-11-17','Black'),
+ ('Sangeetha','Vivo','V9Pro','Chennai','17,990','2018-11-17','Black'),
+ ('Sangeetha','Vivo','Y71i','Chennai','8,990','2018-11-17','Matte Black'),
+ ('p','Vivo','Y71i','Chennai','8,990','2018-11-17','Matte Black'),
+ ('Poorvika','Vivo','Y71i','t','8,990','2018-11-17','Matte Black'),
+ ('Poorvika','Vivo','Y71i','Tambaram','8,990','2018-11-17','Matte Black'),
+ ('Poorvika','Vivo','V11 Pro','Tambaram','25,990','2018-11-17','Starry Night Black'),
+ ('Sangeetha','Vivo','V11 Pro','Chennai','25,990','2018-11-17','Starry Night Black'),
+ ('Sangeetha','Vivo','V7','Chennai','15,990','2018-11-17','Gold'),
+ ('Poorvika','Vivo','V7','Tambaram','15,990','2018-11-17','Gold'),
+ ('Poorvika','Vivo','V7+','Tambaram','16,990','2018-11-17','Gold'),
+ ('Sangeetha','Vivo','V7+','ch','16,990','2018-11-17','Gold'),
+ ('Sangeetha','Vivo','V7+','Chennai','16,990','2018-11-17','Gold'),
+ ('Poorvika','Vivo','Y69','Chennai','13,200','2018-11-17','Matte Black'),
+ ('Sangeetha','Vivo','Y69','Tambaram','13,200','2018-11-17','Matte Black'),
+ ('Sangeetha','Vivo','NEX ','Tambaram','44,990','2018-11-17','Black'),
+ ('Poorvika','Vivo','NEX ','Chennai','44,990','2018-11-17','Black'),
+ ('Poorvika','Vivo','V11','Chennai','20,990','2018-11-17','Nebula Purple'),
+ ('Sangeetha','Vivo','V11','Tambaram','20,990','2018-11-17','Nebula Purple'),
+ ('Sangeetha','Google Pixel ','2 XL','Tambaram',' 44,499','2018-11-17','Black'),
+ ('Poorvika','Google Pixel ','2 XL','Chennai',' 44,499','2018-11-17','Black'),
+ ('Poorvika','Google Pixel ','Pixel 3 ','Chennai',' 68,910','2018-11-17','Just Black'),
+ ('Sangeetha','Google Pixel ','Pixel 3 ','Tambaram',' 68,910','2018-11-17','Just Black'),
+ ('Sangeetha','Google Pixel ','XL','Tambaram',' 39,990','2018-11-17','Quite Black'),
+ ('Poorvika','Google Pixel ','XL','Chennai',' 39,990','2018-11-17','Quite Black'),
+ ('Poorvika','Google Pixel ','Pixel','Chennai','66,000','2018-11-17','Very Silver'),
+ ('Sangeetha','Google Pixel ','Pixel','Tambaram','66,000','2018-11-17','Very Silver'),
+ ('Sangeetha','Google Pixel ','Pixel 2','Tambaram','51,800','2018-11-17','Display'),
+ ('Poorvika','Google Pixel ','Pixel 2','Chennai','51,800','2018-11-17','Display'),
+ ('Poorvika','Samsung ','Galaxy Note 8 ','Chennai','52,990','2018-11-17','Midnight Black'),
+ ('Sangeetha','Samsung ','Galaxy Note 8 ','Tambaram','52,990','2018-11-17','Midnight Black'),
+ ('Sangeetha','Samsung ','Galaxy A8+','Tambaram','29,990','2018-11-17','Black'),
+ ('Poorvika','Samsung ','Galaxy A8+','Chennai','29,990','2018-11-17','Black'),
+ ('Poorvika','Redmi ','6A ','Chennai','7,499','2018-11-17','Gold'),
+ ('Sangeetha','Redmi ','6A ','Tambaram','7,499','2018-11-17','Gold'),
+ ('Opps shop','Samsung Galaxy J7 Prime ','Galaxy J7 Prime ','T-Nagar','15,000','2018-11-19','Black'),
+ ('Poorvika','Samsung','Galaxy J7 Prime ','T-Nagar','15,000','2018-11-19','Black'),
+ ('Poorvika','Samsung','Galaxy J7 Prime ','T-Nagar','15,000','2018-11-19','Black'),
+ ('Poorvika','Samsung','Galaxy J8','T-Nagar','16,999','2018-11-19','Black'),
+ ('Poorvika','Samsung','Galaxy J8','T-Nagar','16,999','2018-11-20','Black');
+/*!40000 ALTER TABLE `bill` ENABLE KEYS */;
+
+
+--
+-- Definition of table `owner`
+--
+
+DROP TABLE IF EXISTS `owner`;
+CREATE TABLE `owner` (
+  `shopname` varchar(245) NOT NULL,
+  `branch` varchar(245) NOT NULL,
+  `area` varchar(245) NOT NULL,
+  `email` varchar(245) NOT NULL,
+  `phonenu` varchar(245) NOT NULL,
+  `password` varchar(245) NOT NULL,
+  `confirmpass` varchar(245) NOT NULL,
+  PRIMARY KEY (`shopname`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `owner`
+--
+
+/*!40000 ALTER TABLE `owner` DISABLE KEYS */;
+INSERT INTO `owner` (`shopname`,`branch`,`area`,`email`,`phonenu`,`password`,`confirmpass`) VALUES 
+ ('Poorvika','Tambaram-1','Tambaram','tambarampoorvika@gmail.com','9965727024','123456','123456');
+/*!40000 ALTER TABLE `owner` ENABLE KEYS */;
+
+
+--
+-- Definition of table `userregistration`
+--
+
+DROP TABLE IF EXISTS `userregistration`;
+CREATE TABLE `userregistration` (
+  `name` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `phone` varchar(45) NOT NULL,
+  `passwod` varchar(45) NOT NULL,
+  `conpassw` varchar(45) NOT NULL,
+  `ky` varchar(45) NOT NULL,
+  `keyma` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `userregistration`
+--
+
+/*!40000 ALTER TABLE `userregistration` DISABLE KEYS */;
+INSERT INTO `userregistration` (`name`,`email`,`phone`,`passwod`,`conpassw`,`ky`,`keyma`) VALUES 
+ ('Anath','anth@gmail.com','','','','',''),
+ ('Sai','saikrishna@gmail.com','','','','',''),
+ ('saikrishna','saikrishna@gmail.com','9965727024','123456','123456','2DTBM','XZLO8');
+/*!40000 ALTER TABLE `userregistration` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
